@@ -1,0 +1,43 @@
+.grid {
+    display: grid !important;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cols-span-2 {
+    grid-column: span 2 / span 2 !important;
+}
+
+.max-w-1000 {
+    max-width: 1000px;
+}
+
+.c-query {
+    container-type: inline-size;
+    container-name: c-query;
+}
+
+@container c-query (max-width: 600px) {
+    .grid-cols-2 {
+        grid-template-columns: auto;
+    }
+
+    .cols-span-2 {
+        grid-column: auto;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    text-transform: capitalize;
+    font-weight: bold;
+    text-decoration-line: none;
+}
