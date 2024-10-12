@@ -14,11 +14,13 @@ class Auth
         try {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+            // Corrected SQL query
+            $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password) RETURNING id";
             $statement = $this->db->prepare($sql);
             $statement->execute(['username' => $username, 'email' => $email, 'password' => $hashed_password]);
 
-            $id = $this->db->lastInsertId();
+            // Fetching the returned id from the SQL query
+            $id = $statement->fetchColumn(); // Fetches the returned 'id'
 
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
