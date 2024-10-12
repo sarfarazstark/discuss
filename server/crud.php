@@ -27,8 +27,8 @@ class CRUD
     public function ask_question($title, $description, $category, $userId)
     {
         try {
-            $sql = "INSERT INTO questions (title, description, category_id, user_id)
-                    VALUES (:title, :description, :category, :user_id)";
+            $sql = "INSERT INTO questions (title, description, category_id, user_id, created_at)
+                    VALUES (:title, :description, :category, :user_id, CURRENT_TIMESTAMP)";
             $this->executeStatement($sql, [
                 'title' => $title,
                 'description' => $description,
