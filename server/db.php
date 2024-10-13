@@ -1,15 +1,9 @@
 <?php
-
-require_once __DIR__ . '/../vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
-
-$host = $_ENV['DB_HOST']; // or your PostgreSQL server address
-$port = $_ENV['DB_PORT']; // default PostgreSQL port
-$dbname = $_ENV['DB_DATABASE']; // your database name
-$username = $_ENV['DB_USERNAME']; // your database username
-$password = $_ENV['DB_PASSWORD']; // your database password
+$host = 'localhost'; // or your PostgreSQL server address
+$port = '5432'; // default PostgreSQL port
+$dbname = 'discuss';
+$username = 'postgres';
+$password = '';
 
 
 $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
