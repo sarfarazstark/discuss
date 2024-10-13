@@ -5,17 +5,17 @@ if (isset($_GET['question'])) {
     $related_questions = $crud->get_questions(null, $question['category_id']); // get the related questions from the database
 }
 ?>
-<div class="container row my-4">
-    <div class="container-sm col-8 max-w-1000">
+<div class="container home-container row my-4">
+    <div class="container-sm max-w-1000">
         <?php if (isset($_GET['message'])): ?>
-        <script>
-        alert('<?= $_GET['message'] ?>')
-        </script>
+            <script>
+                alert('<?= $_GET['message'] ?>')
+            </script>
         <?php endif; ?>
         <?php if (isset($_GET['error'])): ?>
-        <script>
-        alert('<?= $_GET['error'] ?>')
-        </script>
+            <script>
+                alert('<?= $_GET['error'] ?>')
+            </script>
         <?php endif; ?>
         <div class="card p-4">
             <div class="d-flex flex-wrap justify-content-between align-items-start mb-3">
@@ -46,15 +46,15 @@ if (isset($_GET['question'])) {
         </form>
 
     </div>
-    <div class="col-4 px-2">
+    <div class="px-2">
         <h2 class="mb-4">Related Questions</h2>
         <div class="d-flex flex-column align-item-start gap-2">
             <?php foreach ($related_questions as $related_question) : ?>
-            <?php if ($related_question['id'] == $question_id) continue; ?>
-            <a href="?question=<?= $related_question['id'] ?>"
-                class="border rounded border-primary text-center category py-2">
-                <?= $related_question['title'] ?>
-            </a>
+                <?php if ($related_question['id'] == $question_id) continue; ?>
+                <a href="?question=<?= $related_question['id'] ?>"
+                    class="border rounded border-primary text-center category py-2">
+                    <?= $related_question['title'] ?>
+                </a>
             <?php endforeach ?>
         </div>
     </div>

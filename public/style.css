@@ -34,10 +34,33 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    container-name: home-container;
+    container-type: inline-size;
 }
 
 .category {
     text-transform: capitalize;
     font-weight: bold;
     text-decoration-line: none;
+}
+
+div.home-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
+@container home-container (max-width: 600px) {
+    div.home-container {
+        grid-template-columns: auto;
+    }
+
+    div.aside {
+        grid-row-start: 1;
+        margin-bottom: 1rem;
+    }
+
+    .column {
+        flex-direction: column;
+    }
 }

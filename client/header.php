@@ -1,6 +1,6 @@
 <nav class="container-fluid navbar navbar-expand-lg bg-body-tertiary  d-flex justify-content-center">
     <div class="container-sm mx-4">
-        <a class="navbar-brand" href="/discuss"><img src="public/logo.png" alt="logo" height="40"></a>
+        <a class="navbar-brand" href="/discuss"><img src="./public/logo.png" alt="logo" height="40"></a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,34 +17,34 @@
                 </li>
 
                 <?php if (isset($_SESSION['username'])): ?>
-                <li class="nav-item">
-                    <div class="dropdown-center">
-                        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Hello <?= $_SESSION['username'] ?>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-lg-end  text-center">
-                            <li class="dropdown-item ">
-                                <a class="btn btn-primary" href="?ask">Post your question</a>
-                            </li>
-                            <li><a class="dropdown-item fw-bold" href="?userid=<?= $_SESSION['user_id'] ?>">My
-                                    Questions</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-danger" href="./server/requests.php?logout=true">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                    <li class="nav-item">
+                        <div class="dropdown-center">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hello <?= $_SESSION['username'] ?>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-lg-end  text-center">
+                                <li class="dropdown-item ">
+                                    <a class="btn btn-primary" href="?ask">Post your question</a>
+                                </li>
+                                <li><a class="dropdown-item fw-bold" href="?userid=<?= $_SESSION['user_id'] ?>">My
+                                        Questions</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="./server/requests.php?logout=true">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                 <?php else: ?>
-                <li class="nav-item">
-                    <a class="btn btn-outline-primary" href="?login=true">Login </a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-primary" href="?signup=true">Sign Up</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary" href="?login=true">Login </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="?signup=true">Sign Up</a>
+                    </li>
                 <?php endif; ?>
                 <li class="nav-item">
                     <form class="input-group">
