@@ -113,7 +113,13 @@ erDiagram
 ## Installation
 
 - Clone the repository.
+- Install the required PHP dependencies using Composer:
+
+```bash
+composer install
+```
+
 - Set up the database by running the provided SQL scripts.
-- Configure the database connection in `server/db.php`.
+- Configure the database connection in `.env`.
 - Set up a local development environment (Laragon recommended).
 - Start the local server.
