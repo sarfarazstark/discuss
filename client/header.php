@@ -1,6 +1,6 @@
 <nav class="container-fluid navbar navbar-expand-lg bg-body-tertiary  d-flex justify-content-center">
     <div class="container-sm mx-4">
-        <a class="navbar-brand" href="/"><img src="../public/logo.png" alt="logo" height="40"></a>
+        <a class="navbar-brand" href="/discuss"><img src="public/logo.png" alt="logo" height="40"></a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="col-12 navbar-nav mb-2 mb-lg-0 gap-3">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="/discuss">Home</a>
                 </li>
                 <li class="nav-item me-auto">
                     <a class="nav-link" href="?latest">Latest Questions</a>
