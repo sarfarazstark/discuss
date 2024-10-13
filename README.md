@@ -120,6 +120,16 @@ composer install
 ```
 
 - Set up the database by running the provided SQL scripts.
-- Configure the database connection in `.env`.
+- Configure the database connection by making a `.env` file and adding this details
+
+```env
+DB_CONNECTION=postgresql
+DB_HOST=localhost
+DB_PORT=5432
+DB_DATABASE=discuss
+DB_USERNAME=user
+DB_PASSWORD=
+```
+
 - Set up a local development environment (Laragon recommended).
 - Start the local server.
